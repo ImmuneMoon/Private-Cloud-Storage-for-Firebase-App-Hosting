@@ -30,7 +30,10 @@ It was written from a real setup and checked against the official Google Cloud, 
 ## 🚀 How to Use
 Download the PDF above, or read on below. Read **Before You Start**, then work through Sections 2 to 5 in order, finishing with the test in Section 5.7. Section 6 covers problems you'll hit while building, and Section 7 covers costs.
 
-For putting the site online in the first place, see the companion guides, [Building Firebase Apps in Google Antigravity IDE](https://github.com/ImmuneMoon/Building-Firebase-Apps-in-Google-Antigravity-IDE) and [Connecting a Custom Domain to Firebase App Hosting](https://github.com/ImmuneMoon/Connecting-a-Custom-Domain-to-Firebase-App-Hosting).
+This guide works alongside three others:
+* [Building Firebase Apps in Google Antigravity IDE](https://github.com/ImmuneMoon/Building-Firebase-Apps-in-Google-Antigravity-IDE) - Setting up the site, the Firebase CLI, and the emulators.
+* [Connecting a Custom Domain to Firebase App Hosting](https://github.com/ImmuneMoon/Connecting-a-Custom-Domain-to-Firebase-App-Hosting) - Putting the site online: the Blaze plan, `apphosting.yaml`, and deploying.
+* [CLI Cheat Sheet](https://github.com/ImmuneMoon/CLI-Cheat-Sheet) - Terminal commands such as `curl`, side by side for Command Prompt, PowerShell, and Bash.
 
 ---
 
@@ -69,7 +72,7 @@ Throughout, replace:
 You'll need:
 
 - **A Next.js site running on Firebase App Hosting.** Note which region its backend is in: Firebase console ▸ **App Hosting** ▸ your backend.
-- **The Blaze plan.** Both Cloud Storage and App Hosting need Firebase's pay-as-you-go plan. The quickest check is the bottom of the Firebase console's left sidebar, which shows **Blaze** and **Pay as you go**. For more detail, go to **Project settings** ▸ **Usage and billing**: the **Project cost** card on the **Overview** tab has a **Blaze** badge, and budgets are on the **Account & budgets** tab.
+- **The Blaze plan.** Both Cloud Storage and App Hosting need Firebase's pay-as-you-go plan. The quickest check is the bottom of the Firebase console's left sidebar, which shows **Blaze** and **Pay as you go**. For more detail, go to **Project settings** ▸ **Usage and billing**: the **Project cost** card on the **Overview** tab has a **Blaze** badge, and budgets are on the **Account & budgets** tab. Not on Blaze yet? [Section 4.2 of the custom-domain guide](https://github.com/ImmuneMoon/Connecting-a-Custom-Domain-to-Firebase-App-Hosting#42-upgrade-to-the-blaze-plan-and-set-a-budget) covers upgrading and setting a budget alert.
 - **The Google account that owns the Firebase project.** Everything here happens in the Google Cloud console, and it only shows projects for the account you're signed in with.
 - **`firebase-admin`** in your project (`npm install firebase-admin`).
 - **About an hour,** plus a few minutes of waiting for permissions to take effect.
@@ -184,7 +187,7 @@ From any terminal, ask for the bucket without signing in:
 curl https://storage.googleapis.com/<bucket-name>
 ```
 
-On Windows PowerShell, type `curl.exe` instead of `curl`.
+On Windows PowerShell, type `curl.exe` instead of `curl`. New to the terminal? The [CLI Cheat Sheet](https://github.com/ImmuneMoon/CLI-Cheat-Sheet) shows `curl` and other everyday commands.
 
 | Answer contains | Means |
 |---|---|
@@ -272,6 +275,8 @@ env:
     availability:
       - RUNTIME
 ```
+
+No `apphosting.yaml` yet? [Section 4.5 of the custom-domain guide](https://github.com/ImmuneMoon/Connecting-a-Custom-Domain-to-Firebase-App-Hosting#45-register-a-web-app-and-put-its-config-in-apphostingyaml) shows where it goes and how its `env` list works.
 
 ### 5.2 Open the bucket in your code
 
@@ -399,7 +404,7 @@ List only your own site in `origin`. A `*` would let any website use links that 
 
 ### 5.7 Check it works after deploying
 
-Deploy the site, then test it in two stages.
+Deploy the site, then test it in two stages. [Section 10 of the custom-domain guide](https://github.com/ImmuneMoon/Connecting-a-Custom-Domain-to-Firebase-App-Hosting#10-deploying-changes-from-now-on) covers deploying, by pushing to GitHub or releasing from Antigravity.
 
 1. **Check the setting reached the site.** Call the upload route without signing in:
    ```bash
@@ -460,6 +465,8 @@ A workable pattern:
 
 This route takes the file's body, so it's the one to exclude from the proxy (6.2).
 
+To set up the emulators in the first place, see [Section 8 of Building Firebase Apps in Google Antigravity IDE](https://github.com/ImmuneMoon/Building-Firebase-Apps-in-Google-Antigravity-IDE#8-local-emulator-seeding).
+
 ---
 
 ## 7. Costs to Watch
@@ -474,7 +481,7 @@ Check current prices on Google's [Cloud Storage pricing](https://cloud.google.co
 | **Soft-deleted files** | Deleted files kept for the soft delete period | Turn soft delete off (3.5) |
 | **Replication** | Every GB written to a multi-region bucket | Use a single region (3.2) |
 
-The Blaze plan also lets you set a **budget alert** under **Billing** ▸ **Budgets & alerts**. It emails you as spending passes each threshold. It doesn't stop spending.
+The Blaze plan also lets you set a **budget alert** under **Billing** ▸ **Budgets & alerts**. It emails you as spending passes each threshold. It doesn't stop spending. [Section 4.2 of the custom-domain guide](https://github.com/ImmuneMoon/Connecting-a-Custom-Domain-to-Firebase-App-Hosting#42-upgrade-to-the-blaze-plan-and-set-a-budget) walks through setting one.
 
 ---
 
