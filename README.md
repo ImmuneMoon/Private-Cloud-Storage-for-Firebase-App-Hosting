@@ -30,10 +30,12 @@ It was written from a real setup and checked against the official Google Cloud, 
 ## 🚀 How to Use
 Download the PDF above, or read on below. Read **Before You Start**, then work through Sections 2 to 5 in order, finishing with the test in Section 5.7. Section 6 covers problems you'll hit while building, and Section 7 covers costs.
 
-This guide works alongside three others:
+This guide works alongside:
 * [Building Firebase Apps in Google Antigravity IDE](https://github.com/ImmuneMoon/Building-Firebase-Apps-in-Google-Antigravity-IDE) - Setting up the site, the Firebase CLI, and the emulators.
 * [Connecting a Custom Domain to Firebase App Hosting](https://github.com/ImmuneMoon/Connecting-a-Custom-Domain-to-Firebase-App-Hosting) - Putting the site online: the Blaze plan, `apphosting.yaml`, and deploying.
 * [CLI Cheat Sheet](https://github.com/ImmuneMoon/CLI-Cheat-Sheet) - Terminal commands such as `curl`, side by side for Command Prompt, PowerShell, and Bash.
+* [Full Stack Web Development and Stacks](https://github.com/ImmuneMoon/Full-Stack-Web-Development-and-Stacks#7-backend-as-a-service-firebase-and-supabase) - Where Firebase fits among backend options, compared with Supabase.
+* [Publishing to GitHub with gh](https://github.com/ImmuneMoon/Publishing-to-GitHub-with-gh#64-when-a-public-key-stops-being-safe-google-api-keys-and-gemini) - Why a Firebase API key that was "safe to publish" can become a risk once the Gemini API is turned on in the same project.
 
 ---
 
