@@ -3,7 +3,6 @@
 ![Firebase App Hosting](https://img.shields.io/badge/Firebase-App%20Hosting-FFCA28?logo=firebase&logoColor=white)
 ![Google Cloud Storage](https://img.shields.io/badge/Google%20Cloud-Storage-4285F4?logo=googlecloud&logoColor=white)
 ![Next.js 16](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white)
-![Checked against official docs, November 2026](https://img.shields.io/badge/Checked-Nov%202026-2ea44f)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)](LICENSE)
 
 **📄 [Download the PDF](Private-Cloud-Storage-for-Firebase-App-Hosting.pdf)**
