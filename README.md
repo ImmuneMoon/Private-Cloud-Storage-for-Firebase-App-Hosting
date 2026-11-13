@@ -16,7 +16,7 @@
 - the limits that quietly break large uploads, and how to work around them;
 - what you'll pay for.
 
-It was written from a real setup and checked against the official Google Cloud, Firebase and Next.js documentation as of November 2026. A Sources section links to every page it was checked against.
+A Sources section links to the official Google Cloud, Firebase and Next.js documentation behind each step.
 
 ## ⚠️ Important Notes
 * **Tick "Enforce public access prevention", whatever the summary says.** The form's collapsed summary can say "Public access prevention: On" while the checkbox inside is unticked. Open that step and tick it (Section 3.4).
@@ -511,7 +511,7 @@ The Blaze plan also lets you set a **budget alert** under **Billing** ▸ **Budg
 
 ## 9. Sources
 
-Checked against these pages in November 2026. Menus move from time to time; if one looks different, the page will show its current name.
+Menus move from time to time; if one looks different, the page will show its current name.
 
 **Google Cloud Storage**
 - [Bucket locations](https://docs.cloud.google.com/storage/docs/locations)
